@@ -18,7 +18,7 @@ pipeline {
     }
     stage('git push') {
       steps {
-        bat 'git push'
+        bat(script: 'git push origin', returnStatus: true, returnStdout: true, encoding: 'ut8')
       }
     }
   }
