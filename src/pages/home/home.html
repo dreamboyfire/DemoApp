@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>首页</ion-title>
+    <ion-buttons end>
+      <button ion-button class="bar-button-menutoggle-md">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-row>
+    <ion-col col-6>
+      <ion-card>
+        <ion-card-content>
+          <ion-icon name="logo-angular" IonIonicColor></ion-icon>&nbsp;Angular
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goPage('ionic')">
+        <ion-card-content>
+          <ion-icon name="ionic" IonIonicColor></ion-icon>&nbsp;Ionic
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card>
+        <ion-card-content>
+          <ion-icon name="bookmark" IonIonicColor></ion-icon>&nbsp;Lodash
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card>
+        <ion-card-content>
+          <ion-icon name="bookmark" IonIonicColor></ion-icon>&nbsp;moment
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>-->
+  <ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goPage('calendar')">
+        <ion-card-content>
+          <ion-icon name="calendar" IonIonicColor></ion-icon>&nbsp;Calendar
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goPage('fingerprint')">
+        <ion-card-content>
+          <ion-icon name="finger-print"></ion-icon>&nbsp;Fingerprint
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goPage('moment')">
+        <ion-card-content>
+          <i name="icon-time"></i>&nbsp;Moment
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goPage('camera')">
+        <ion-card-content>
+          <i name="icon-camera"></i>&nbsp;Camera
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goPage('camera-preview')">
+        <ion-card-content>
+          <i name="icon-time"></i>&nbsp;Camera Preview
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+  <!--<ion-row>
+    <ion-col col-6>
+      <ion-card (click)="goPage('ckeditor')">
+        <ion-card-content>
+          <ion-icon name="create"></ion-icon>&nbsp;CKEditor
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>-->
+  <ion-row>
+    <ion-col>
+      connected: {{socketio.connected}}
+    </ion-col>
+    <ion-col>
+      disconnected: {{socketio.disconnected}}
+    </ion-col>
+  </ion-row>
+  <!--<button ion-button (click)="disconnectSocket()">断开socket</button>-->
+</ion-content>

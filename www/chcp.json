@@ -1,0 +1,7 @@
+{
+  "name": "DemoApp",
+  "update": "now",
+  "content_url": "http://123.207.244.73:3000/DemoApp/www",
+  "config_url": "http://123.207.244.73:3000/DemoApp/www/chcp.json",
+  "release": "2018.04.16-15.28.02"
+}

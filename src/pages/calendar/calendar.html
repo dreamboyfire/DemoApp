@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calendar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <huawei-calendar #calendar [hidden]="false" (onCreateMonth)="onCreateMonth($event)"></huawei-calendar>
+  <!--<ion-slides>
+    <ion-slide *ngFor="let slide of slideList">
+      &lt;!&ndash;<huawei-calendar></huawei-calendar>&ndash;&gt;
+      <h1>Slide {{slide}}</h1>
+    </ion-slide>
+  </ion-slides>-->
+</ion-content>

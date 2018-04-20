@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      FingerprintJS
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button block (click)="FingerprintIsAvailable()">判断是否支持指纹</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button block (click)="FingerprintEncrypt()">指纹加密</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button block (click)="FingerprintDecrypt()">指纹解密</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="" stacked>
+        配置：
+      </ion-label>
+      <ion-textarea rows="5" readonly="true" [(ngModel)]="decryptConfigString"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label color="" stacked>
+        结果：
+      </ion-label>
+      <ion-textarea rows="15" readonly="true" [(ngModel)]="fingerprintAuthResult"></ion-textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>

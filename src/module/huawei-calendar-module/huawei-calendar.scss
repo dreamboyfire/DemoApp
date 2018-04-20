@@ -1,0 +1,146 @@
+huawei-calendar {
+  ion-header {
+    ion-navbar {
+      min-height: 36px !important;
+      .toolbar-background {
+        background-color: white !important;
+      }
+      .toolbar-content {
+        ion-title {
+          .toolbar-title {
+            color: black !important;
+          }
+        }
+      }
+    }
+  }
+
+  ion-slides {
+    .swiper-slide {
+      align-items: start;
+    }
+  }
+
+  .navBar {
+    ion-row {
+      ion-col {
+        padding: 0px !important;
+
+        .scheduleChuChai {
+          ion-badge {
+            border: 1px solid color($colors, scheduleChuChai);
+            width: 4.4rem;
+          }
+          .normalBadge {
+            color: color($colors, scheduleChuChai) !important;
+          }
+        }
+        .scheduleRoadShow {
+          ion-badge {
+            border: 1px solid color($colors, scheduleRoadShow);
+            width: 4.4rem;
+          }
+          .normalBadge {
+            color: color($colors, scheduleRoadShow) !important;
+          }
+        }
+        .scheduleMeeting {
+          ion-badge {
+            border: 1px solid color($colors, scheduleMeeting);
+            width: 4.4rem;
+          }
+          .normalBadge {
+            color: color($colors, scheduleMeeting) !important;
+          }
+        }
+
+      }
+    }
+  }
+
+  .calendarHeader {
+    //margin-top: 36px;
+    ion-grid {
+      padding: 0px;
+      ion-row {
+        ion-col {
+          text-align: center;
+          font-weight: 700;
+          background-color: white;
+          z-index: 99999;
+        }
+      }
+      .weekHeader {
+        ion-row {
+          height: 3.5rem;
+          ion-col {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .calendarContent {
+    .dayContent {
+      ion-row {
+        min-height: 3.4rem;
+        ion-col {
+          background-color: white !important;
+          padding: 0px !important;
+        }
+      }
+      .currentWeek {
+        z-index: 99999 !important;
+      }
+      .notCurrentWeek {
+        transform-style: flat !important;
+        z-index: 10 !important;
+      }
+      .day {
+        //border-radius: 50%;
+        height: 4.0rem;
+        width: 4.0rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        span {
+          padding: 0px !important;
+          //border-radius: 50% !important;
+          font-size: 1rem !important;
+          transform: scale(0.7);
+          position: absolute;
+          bottom: 0.15rem;
+          right: 0.15rem;
+        }
+      }
+      .dayFlag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15px;
+        transform: scale(0.7);
+      }
+      .current {
+        border: 2px solid #cee9fd;
+      }
+      .selected {
+        background-color: #cee9fd;
+      }
+      .pre {
+        color: #cccccc;
+      }
+      .next {
+        color: #cccccc;
+      }
+      .current {
+
+      }
+    }
+  }
+
+}

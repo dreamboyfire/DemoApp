@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Moment
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label color="" stacked>
+        代码
+      </ion-label>
+      <ion-textarea placeholder="请输入执行代码" rows="5"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button small block (click)="runCode()">运行代码</button>
+    </ion-col>
+  </ion-row>
+  <p>{{result}}</p>
+</ion-content>

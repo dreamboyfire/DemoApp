@@ -1,0 +1,47 @@
+<div class="huawei-calendar">
+  <ion-item-divider color="light" align="center">
+    <span>{{selectDate.format(_monthFormat)}},&nbsp;{{selectDate.week()}}周</span>
+  </ion-item-divider>
+  <div class="calendarHeader">
+    <ion-grid>
+      <div class="weekHeader">
+        <ion-row>
+          <ion-col *ngFor="let weekHeader of _weekHeader">
+            {{weekHeader}}
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </div>
+  <ion-slides id="calendarIonSlides" #calendarSlides [loop]="false"
+              [initialSlide]="initialSlide">
+    <ion-slide *ngFor="let calendar of calendarData" [hidden]="isShowByWeek">
+      <div class="calendarContent">
+        <div class="dayContent" *ngIf="calendar.weeks">
+          <div *ngFor="let week of calendar.weeks;">
+            <ion-row>
+              <ion-col *ngFor="let day of week" (click)="selectDay(day)">
+                <div class="day {{day.type}} {{day.selected}}">{{day.label}}<span *ngFor="let badge of day.badges">{{badge.text}}</span></div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-slides id="weekIonSlides" #weekSlides [loop]="false"
+              [initialSlide]="initialSlide">
+    <ion-slide *ngFor="let week of weekData" [hidden]="!isShowByWeek">
+      <div class="calendarContent">
+        <div class="dayContent" *ngIf="week.weekdays">
+          <ion-row>
+            <ion-col *ngFor="let weekday of week.weekdays" (click)="selectWeekDay(weekday, true)">
+              <div class="day {{weekday.type}} {{weekday.selected}}">{{weekday.label}}<span *ngFor="let badge of weekday.badges">{{badge.text}}</span></div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</div>

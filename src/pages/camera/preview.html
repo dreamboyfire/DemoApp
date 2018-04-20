@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera Preview
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button block color="light" (click)="start()"><ion-icon #ionIcon name="play" style="color: #d3d3d3"></ion-icon></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block color="light" (click)="take()"><ion-icon name="happy" style="color: #d3d3d3"></ion-icon></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block color="light" (click)="stop()"><ion-icon name="stopwatch" style="color: #d3d3d3"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  <ion-row (click)="take()">
+    <ion-col col-12 text-center>
+      <ion-icon name="logo-nodejs" style="font-size: 25rem;" color="light"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <div *ngIf="screenHeight && screenWidth" (click)="take()">
+    <canvas id="canvas" width="{{screenWidth}}" height="{{screenHeight}}" [hidden]="!showAnimate" ></canvas>
+  </div>
+  <!--<img src="{{base64Image}}" />-->
+</ion-content>
