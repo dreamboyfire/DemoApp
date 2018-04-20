@@ -13,6 +13,7 @@ pipeline {
     }
     stage('commit') {
       steps {
+        bat(script: 'git add *', encoding: 'utf8', returnStatus: true, returnStdout: true)
         bat(script: 'git commit -m "new version"', encoding: 'utf8', returnStatus: true, returnStdout: true)
       }
     }
