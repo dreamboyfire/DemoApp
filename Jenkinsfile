@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('npm install') {
       steps {
-        echo 'npm install.............'
+        bat(script: 'npm install', encoding: 'utf8', returnStatus: true, returnStdout: true)
       }
     }
   }
