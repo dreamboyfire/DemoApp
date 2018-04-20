@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('ionic serve') {
+    stage('ionic build') {
       steps {
-        bat(script: 'ionic serve', encoding: 'utf8', returnStatus: true, returnStdout: true)
+        bat(script: 'ionic build --prod', encoding: 'utf8', returnStatus: true, returnStdout: true)
       }
     }
   }
